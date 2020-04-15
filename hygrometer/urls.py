@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from hygrometer_app import views as hygrometer_views
 
 urlpatterns = [
+    path('', hygrometer_views.hygrometer, name='hygrometer'),
+
+
     path('admin/', admin.site.urls),
 ]

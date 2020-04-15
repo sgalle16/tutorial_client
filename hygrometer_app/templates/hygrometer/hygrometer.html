@@ -1,0 +1,18 @@
+{% extends 'hygrometer/base.html' %}
+{% block content %}
+<div class="container">
+    <form method="get">
+        <input type="number" name="value">
+        <button type="submit">Adicionar</button>
+    
+
+
+    </form>
+    {% for hygrometer in hygrometer %}
+    <ul class="list-group">
+        <li class="list-group-item">{{hygrometer.type}} = {{hygrometer.value}}</li>
+    </ul>
+    {% endfor %}
+</div>
+
+{% endblock %}
